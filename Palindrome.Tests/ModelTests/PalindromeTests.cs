@@ -7,10 +7,17 @@ namespace Palindrome.Tests
   public class InputCheckerTests
   {
     [TestMethod]
-    public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
+    public void IsItAPalindrome_WillCheckIfWordsAreEqual_True()
     {
-      // any necessary logic to prep for test; instantiating new classes, etc.
-      // Assert.AreEqual(EXPECTED RESULT, CODE TO TEST);
+      InputChecker palindrome = new InputChecker();
+      Assert.AreEqual(true, palindrome.IsItAPalindrome("lol"));
+    }
+
+        [TestMethod]
+    public void IsItAPalindrome_WillCheckIfNotWordsAreEqual_False()
+    {
+      InputChecker palindrome = new InputChecker();
+      Assert.AreEqual(false, palindrome.IsItAPalindrome("lola"));
     }
   }
 }

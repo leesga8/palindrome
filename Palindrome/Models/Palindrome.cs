@@ -1,7 +1,18 @@
+using System;
+using System.Collections.Generic;
+
 namespace Palindrome
 {
   public class InputChecker
-  {
-    // properties, constructors, methods, etc. go here
+  { 
+    public bool IsItAPalindrome(string word)
+    {
+      char[] reversedArray = word.ToCharArray();
+      Array.Reverse(reversedArray);
+      string reversed = new string(reversedArray);
+      if (word.Equals(reversed)) return true;
+        
+      return false; 
+    }
   }
 }
